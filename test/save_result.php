@@ -64,7 +64,8 @@ if (!$result) {
     return;
 }?>
 
-    
+<h2>診断結果を保存しました</h2>
+<a href="mypage.php">マイページへ</a>
     </div>
 </body>
 

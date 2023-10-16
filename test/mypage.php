@@ -15,6 +15,18 @@ if (!$result) {
 }
 
 $login_user = $_SESSION['login_user'];
+$email = $login_user['email'];
+
+try{
+ $stmt = connect()->prepare("SELECT result FROM users WHERE email = :email");
+ $stmt->bindParam(':email', $email);
+ $stmt->execute();
+ $results = $stmt->fetch(PDO::FETCH_ASSOC);
+
+}catch(PDOException){
+  echo 'エラー:' . $e->getMessage();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,6 +66,7 @@ $login_user = $_SESSION['login_user'];
 
         <h2>My診断結果</h2>
        
+        <p><?php echo $results['result'];?></p>
         <form action="logout.php" method="POST">
             <input type="submit" name="logout" value="ログアウト">
         </form>
