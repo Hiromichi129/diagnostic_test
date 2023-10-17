@@ -1,17 +1,9 @@
-<?php 
+<?php
 session_start();
+
 require_once 'UserLogic.php';
-require_once 'functions.php';
-require_once '../dbconnect.php';
 $result = UserLogic::checkLogin();
-
-$login_user = $_SESSION['login_user'];
-
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html>
 
@@ -30,6 +22,7 @@ $login_user = $_SESSION['login_user'];
         <div class="header-list">
             <ul>
                 <li class="login" onclick="toLogin();" style="cursor: pointer;">
+
                 <?php
 
                     if ($result) {
@@ -39,35 +32,20 @@ $login_user = $_SESSION['login_user'];
                     }
                 ?>
                 </li>
+
                 <li class="search"><a href="choose.php">診断を選ぶ</a></li>
-             
+                
             </ul>
         </div>
     </div>
 
     <div class="main-c">
-  
- <?php 
-
-require_once 'UserLogic.php';
-require_once 'functions.php';
-require_once '../dbconnect.php';
-$result = UserLogic::checkLogin();
-
-$login_user = $_SESSION['login_user'];
-$email = $login_user['email'];
-$result1 = $_POST['result'];
-
-
- $result = UserLogic::getresult($result1,$email); 
- 
-if (!$result) {
-   echo '失敗です';
-    return;
-}?>
-
-<h2>診断結果を保存しました</h2>
-<a href="mypage.php">マイページへ</a>
+        <form action="save_result.php" method="POST">
+            <div class="result">診断結果</div>
+            <p class="resultContet">英文解釈の知識が足りていません</p>
+            <input type="hidden" name="result" value="英文解釈の知識が足りていません">
+            <button type="submit">結果を保存する</button>
+        </form>
     </div>
 </body>
 

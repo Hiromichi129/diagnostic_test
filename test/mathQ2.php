@@ -36,12 +36,11 @@ $result = UserLogic::checkLogin();
 
     <div class="main-e">
         <div class="Question">
-            Q1.品詞を理解している
-            （形容詞・副詞etc...）
+            Q2.教科書の例題レベルはすぐに解ける
         </div>
         <div class="btns">
-            <input type="button" class="btn_yes" value="はい" onclick="location.href='englishQ2.php'" >
-            <input type="button" class="btn_no" value="いいえ" onclick="location.href='resultE1.php'" >
+            <input type="button" class="btn_yes" value="はい" onclick="location.href='mathQ3.php'" >
+            <input type="button" class="btn_no" value="いいえ" onclick="location.href='resultM2.php'" >
         </div>
     </div>
 </body>

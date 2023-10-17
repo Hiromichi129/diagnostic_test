@@ -53,7 +53,7 @@ $result = UserLogic::checkLogin();
 
         <div class="tests-contents1">
             <span class="Mtests-choose">あなたが数学が苦手な理由は？</span>
-            <a href="/test/english.php" class="Mtest-btn">診断を始める</a>
+            <a href="/test/mathQ1.php" class="Mtest-btn">診断を始める</a>
         </div>
 
     </div>

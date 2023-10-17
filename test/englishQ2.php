@@ -23,7 +23,7 @@ $result = UserLogic::checkLogin();
         <div class="header-list">
             <ul>
                 <li class="login" onclick="toLogin();" style="cursor: pointer;"><?php
-  
+  // ログイン中であれば「マイページ」を表示、それ以外の場合は「ログイン」を表示
   if ($result) {
     echo 'マイページ';
   } else {
@@ -35,13 +35,13 @@ $result = UserLogic::checkLogin();
     </div>
 
     <div class="main-e">
-        <div class="Question_E">
+        <div class="Question">
             Q2.英文を品詞分解することができる
             
         </div>
         <div class="btns">
-            <input type="button" class="btn_yes" value="はい" onclick="location.href='./index.html'">
-            <input type="button" class="btn_no" value="いいえ" >
+            <input type="button" class="btn_yes" value="はい" onclick="location.href='englishQ3.php'" >
+            <input type="button" class="btn_no" value="いいえ" onclick="location.href='resultE2.php'" >
         </div>
     </div>
 </body>

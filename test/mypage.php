@@ -17,14 +17,13 @@ if (!$result) {
 $login_user = $_SESSION['login_user'];
 $email = $login_user['email'];
 
-try{
- $stmt = connect()->prepare("SELECT result FROM users WHERE email = :email");
- $stmt->bindParam(':email', $email);
- $stmt->execute();
- $results = $stmt->fetch(PDO::FETCH_ASSOC);
-
-}catch(PDOException){
-  echo 'エラー:' . $e->getMessage();
+try {
+    $stmt = connect()->prepare("SELECT result FROM users WHERE email = :email");
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+    $results = $stmt->fetch(PDO::FETCH_ASSOC);
+} catch (PDOException) {
+    echo 'エラー:' . $e->getMessage();
 }
 
 ?>
@@ -36,7 +35,7 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="english.js"></script>
     <link rel="stylesheet" href="stylesheet.css">
-    <title>ユーザー登録完了画面</title>
+    <title>マイページ</title>
 </head>
 
 <body>
@@ -64,9 +63,9 @@ try{
         <p>メールアドレス：<?php echo h($login_user['email']) ?></p>
 
 
-        <h2>My診断結果</h2>
-       
-        <p><?php echo $results['result'];?></p>
+        <h2>前回の診断結果</h2>
+
+        <p><?php echo $results['result']; ?></p>
         <form action="logout.php" method="POST">
             <input type="submit" name="logout" value="ログアウト">
         </form>
