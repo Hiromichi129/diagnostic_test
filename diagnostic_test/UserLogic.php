@@ -126,27 +126,23 @@ class UserLogic
 
     public static function getresult($result1, $email)
     {
-        
+
 
         $sql = "UPDATE users SET result = :result1 WHERE email = :email";
-       
+
 
         try {
             $stmt = connect()->prepare($sql);
             $stmt->bindParam(':result1', $result1, PDO::PARAM_STR);
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->execute();
-         
-   
+
+
             return true;
         } catch (PDOException $e) {
             echo "データベースエラー: " . $e->getMessage();
             error_log($e->getMessage(), 0);
             return false;
         }
-
-       
     }
-
-    
 }

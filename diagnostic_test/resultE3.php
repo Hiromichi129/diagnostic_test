@@ -22,23 +22,18 @@ $result = UserLogic::checkLogin();
         <div class="header-list">
             <ul>
                 <li class="login" onclick="toLogin();" style="cursor: pointer;">
-
-                <?php
-
+                    <?php
                     if ($result) {
-                       echo 'マイページ';
+                        echo 'マイページ';
                     } else {
-                       echo 'ログイン';
+                        echo 'ログイン';
                     }
-                ?>
+                    ?>
                 </li>
-
                 <li class="search"><a href="choose.php">診断を選ぶ</a></li>
-                
             </ul>
         </div>
     </div>
-
     <div class="main-c">
         <form action="save_result.php" method="POST">
             <div class="result">診断結果</div>

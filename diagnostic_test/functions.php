@@ -6,7 +6,8 @@
  * @param string $str 対象の文字列
  * @return string 処理された文字列
  */
-function h($str) {
+function h($str)
+{
   return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
@@ -15,7 +16,8 @@ function h($str) {
  * @param 
  * @return string $csrf_token
  */
-function setToken() {
+function setToken()
+{
   // トークンを生成
   // フォームからそのトークンを送信
   // 送信後の画面でそのトークンを照会

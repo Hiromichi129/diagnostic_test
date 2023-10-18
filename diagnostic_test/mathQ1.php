@@ -23,30 +23,26 @@ $result = UserLogic::checkLogin();
         <div class="header-list">
             <ul>
                 <li class="login" onclick="toLogin();" style="cursor: pointer;">
-
-                <?php
-
+                    <?php
                     if ($result) {
-                       echo 'マイページ';
+                        echo 'マイページ';
                     } else {
-                       echo 'ログイン';
+                        echo 'ログイン';
                     }
-                ?>
-                </li>
-
+                    ?>
                 <li class="search"><a href="choose.php">診断を選ぶ</a></li>
-                
+                </li>
             </ul>
         </div>
     </div>
-
-    <div class="main-c">
-        <form action="save_result.php" method="POST">
-            <div class="result">診断結果</div>
-            <p class="resultContet">単語と文法の知識が足りていません</p>
-            <input type="hidden" name="result" value="単語と文法の知識が足りていません">
-            <button type="submit">結果を保存する</button>
-        </form>
+    <div class="main-e">
+        <div class="Question">
+            Q1.公式と定義を理解し、覚えている
+        </div>
+        <div class="btns">
+            <input type="button" class="btn_yes" value="はい" onclick="location.href='mathQ2.php'">
+            <input type="button" class="btn_no" value="いいえ" onclick="location.href='resultM1.php'">
+        </div>
     </div>
 </body>
 

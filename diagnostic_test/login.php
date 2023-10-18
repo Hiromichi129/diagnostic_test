@@ -4,7 +4,7 @@ session_start();
 
 require_once 'UserLogic.php';
 
-// バリデーション
+
 $err = [];
 
 if (!$email = filter_input(INPUT_POST, 'email')) {
@@ -16,15 +16,15 @@ if (!$password = filter_input(INPUT_POST, 'password')) {
 
 
 if (count($err) > 0) {
-    // セッションへエラー内容を連想配列で保存
+
     $_SESSION =  $err;
-    // エラーがあった場合はlogin_form.phpに戻す    
+
     header('Location: login_form.php');
     return;
 }
-// ログイン成功時の処理
+
 $result = UserLogic::login($email, $password);
-// ログイン失敗時の処理
+
 if (!$result) {
     header('Location: login_form.php');
     return;

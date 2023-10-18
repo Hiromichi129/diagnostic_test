@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 require_once 'UserLogic.php';
@@ -28,15 +28,16 @@ $result = UserLogic::checkLogin();
 
     <div class="header-list">
       <ul class="lists">
-        <li class="login" onclick="toLogin();" style="cursor: pointer;">  <?php
-  // ログイン中であれば「マイページ」を表示、それ以外の場合は「ログイン」を表示
-  if ($result) {
-    echo 'マイページ';
-  } else {
-    echo 'ログイン';
-  }
-  ?> <li class="search"><a href="choose.php">診断を選ぶ</a></li>
-    </li>
+        <li class="login" onclick="toLogin();" style="cursor: pointer;">
+          <?php
+          if ($result) {
+            echo 'マイページ';
+          } else {
+            echo 'ログイン';
+          }
+          ?>
+        <li class="search"><a href="choose.php">診断を選ぶ</a></li>
+        </li>
       </ul>
     </div>
   </div>

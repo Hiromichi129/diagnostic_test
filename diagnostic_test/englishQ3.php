@@ -18,35 +18,33 @@ $result = UserLogic::checkLogin();
 <body>
     <div class="header">
         <div class="header-logo">
-            <a class="homelink" href="/test/home.php">勉強分析診断</a>
+            <a class="homelink" href="/diagnostic_test/home.php">勉強分析診断</a>
         </div>
         <div class="header-list">
             <ul>
                 <li class="login" onclick="toLogin();" style="cursor: pointer;">
-
-                <?php
-
+                    <?php
                     if ($result) {
-                       echo 'マイページ';
+                        echo 'マイページ';
                     } else {
-                       echo 'ログイン';
+                        echo 'ログイン';
                     }
-                ?>
-                </li>
-
+                    ?>
                 <li class="search"><a href="choose.php">診断を選ぶ</a></li>
-                
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="main-c">
-        <form action="save_result.php" method="POST">
-            <div class="result">診断結果</div>
-            <p class="resultContet">公式と定義の知識が足りていません</p>
-            <input type="hidden" name="result" value="公式と定義の知識が足りていません">
-            <button type="submit">結果を保存する</button>
-        </form>
+    <div class="main-e">
+        <div class="Question">
+            Q3.英文の文型を見分けることができる
+
+        </div>
+        <div class="btns">
+            <input type="button" class="btn_yes" value="はい" onclick="location.href='resultE4.php'">
+            <input type="button" class="btn_no" value="いいえ" onclick="location.href='resultE3.php'">
+        </div>
     </div>
 </body>
 

@@ -1,5 +1,3 @@
-
-
 const toLogin = () => {
     window.location.href = "/test/login_form.php"
 }

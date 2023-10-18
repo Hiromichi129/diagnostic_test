@@ -22,25 +22,26 @@ $result = UserLogic::checkLogin();
         </div>
         <div class="header-list">
             <ul>
-                <li class="login" onclick="toLogin();" style="cursor: pointer;"><?php
-  // ログイン中であれば「マイページ」を表示、それ以外の場合は「ログイン」を表示
-  if ($result) {
-    echo 'マイページ';
-  } else {
-    echo 'ログイン';
-  }
-  ?><li class="search"><a href="choose.php">診断を選ぶ</a></li></li>
+                <li class="login" onclick="toLogin();" style="cursor: pointer;">
+                    <?php
+                    if ($result) {
+                        echo 'マイページ';
+                    } else {
+                        echo 'ログイン';
+                    }
+                    ?>
+                <li class="search"><a href="choose.php">診断を選ぶ</a></li>
+                </li>
             </ul>
         </div>
     </div>
-
     <div class="main-e">
         <div class="Question">
-            Q3.教科書の練習問題・応用問題を解ける
+            Q2.教科書の例題レベルはすぐに解ける
         </div>
         <div class="btns">
-            <input type="button" class="btn_yes" value="はい" onclick="location.href='resultM4.php'" >
-            <input type="button" class="btn_no" value="いいえ" onclick="location.href='resultM3.php'" >
+            <input type="button" class="btn_yes" value="はい" onclick="location.href='mathQ3.php'">
+            <input type="button" class="btn_no" value="いいえ" onclick="location.href='resultM2.php'">
         </div>
     </div>
 </body>
