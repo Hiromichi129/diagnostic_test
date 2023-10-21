@@ -20,7 +20,7 @@ $result = UserLogic::checkLogin();
 <body>
     <div class="header">
         <div class="header-logo">
-            <a class="homelink" href="/test/home.php">勉強分析診断</a>
+            <a class="homelink" href="home.php">勉強分析診断</a>
         </div>
         <div class="header-list">
             <ul>
@@ -40,12 +40,10 @@ $result = UserLogic::checkLogin();
     <div class="main-c">
         <?php
         if ($result) {
-
             $login_user = $_SESSION['login_user'];
             $email = $login_user['email'];
             $result1 = $_POST['result'];
             $result = UserLogic::getresult($result1, $email);
-
             if (!$result) {
                 echo '失敗です';
             } else {

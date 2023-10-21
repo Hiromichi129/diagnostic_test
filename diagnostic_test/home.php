@@ -23,7 +23,7 @@ $result = UserLogic::checkLogin();
   <div class="header">
 
     <div class="header-logo">
-      <a class="homelink" href="/test/home.php">勉強分析診断</a>
+      <a class="homelink" href="home.php">勉強分析診断</a>
     </div>
 
     <div class="header-list">
@@ -46,7 +46,7 @@ $result = UserLogic::checkLogin();
     <div class="mainC">
       <div class="main-title">勉強分析診断</div>
 
-      <a class="start-btn" href="/test/choose.php">診断を受ける</a>
+      <a class="start-btn" href="choose.php">診断を受ける</a>
     </div>
   </div>
 

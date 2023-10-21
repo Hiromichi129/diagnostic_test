@@ -21,7 +21,7 @@ $result = UserLogic::checkLogin();
     <div class="header">
 
         <div class="header-logo">
-            <a class="homelink" href="/test/home.php">勉強分析診断</a>
+            <a class="homelink" href="home.php">勉強分析診断</a>
         </div>
 
         <div class="header-list">
@@ -48,14 +48,14 @@ $result = UserLogic::checkLogin();
 
         <div class="tests-contents2">
             <span class="Etests-choose">あなたが英語が苦手な理由は？</span>
-            <a href="/test/englishQ1.php" class="Etest-btn">診断を始める</a>
+            <a href="englishQ1.php" class="Etest-btn">診断を始める</a>
         </div>
 
 
 
         <div class="tests-contents1">
             <span class="Mtests-choose">あなたが数学が苦手な理由は？</span>
-            <a href="/test/mathQ1.php" class="Mtest-btn">診断を始める</a>
+            <a href="mathQ1.php" class="Mtest-btn">診断を始める</a>
         </div>
 
     </div>

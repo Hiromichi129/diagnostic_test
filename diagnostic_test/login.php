@@ -48,7 +48,7 @@ if (!$result) {
     <?php if (count($err) > 0) : ?>
         <div class="header">
             <div class="header-logo">
-                <a class="homelink" href="/test/home.php">勉強分析診断</a>
+                <a class="homelink" href="/home.php">勉強分析診断</a>
             </div>
 
             <div class="header-list">
@@ -63,14 +63,14 @@ if (!$result) {
             <?php foreach ($err as $e) : ?>
                 <p><?php echo $e ?></p>
             <?php endforeach ?>
-            <a href="./signup_form.php">戻る</a>
+            <a href="signup_form.php">戻る</a>
         </div>
 
     <?php else : ?>
         <div class="header">
 
             <div class="header-logo">
-                <a class="homelink" href="/test/top.php">勉強分析診断</a>
+                <a class="homelink" href="top.php">勉強分析診断</a>
             </div>
 
             <div class="header-list">

@@ -34,7 +34,7 @@ try {
 <body>
     <div class="header">
         <div class="header-logo">
-            <a class="homelink" href="/test/home.php">勉強分析診断</a>
+            <a class="homelink" href="home.php">勉強分析診断</a>
         </div>
         <div class="header-list">
             <ul class="lists">
