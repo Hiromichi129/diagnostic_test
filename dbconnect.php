@@ -1,7 +1,5 @@
 <?php
-
 require_once 'env.php';
-
 function connect()
 {
     $host = getenv("DB_HOST");
@@ -9,7 +7,6 @@ function connect()
     $user = getenv("DB_USER");
     $pass = getenv("DB_PASS");
     $dsn  = "mysql:host=$host;dbname=$db;charset=utf8mb4";
-
     try {
         $pdo  = new PDO(
             $dsn,

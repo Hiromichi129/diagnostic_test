@@ -1,15 +1,12 @@
 <?php
 session_start();
-
 require_once 'functions.php';
 require_once 'UserLogic.php';
-
 $result = UserLogic::checkLogin();
 if ($result) {
   header('Location: mypage.php');
   return;
 }
-
 $login_err = isset($_SESSION['login_err']) ? $_SESSION['login_err'] : null;
 unset($_SESSION['login_err']);
 ?>
@@ -21,7 +18,7 @@ unset($_SESSION['login_err']);
   <link rel="stylesheet" href="stylesheet.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript" src="english.js"></script>
+  <script type="text/javascript" src="script.js"></script>
   <title>ログイン画面</title>
 </head>
 

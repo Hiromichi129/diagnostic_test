@@ -1,17 +1,16 @@
 <?php
 session_start();
-
 require_once 'UserLogic.php';
-
 $result = UserLogic::checkLogin();
 ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>勉強分析診断</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script type="text/javascript" src="english.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <meta charset="UTF-8">
 </head>
 

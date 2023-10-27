@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 require_once 'UserLogic.php';
-
 $result = UserLogic::checkLogin();
 ?>
 
@@ -12,7 +10,7 @@ $result = UserLogic::checkLogin();
 <head>
     <title>勉強分析診断</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script type="text/javascript" src="english.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <meta charset="UTF-8">
 </head>
 
@@ -26,14 +24,14 @@ $result = UserLogic::checkLogin();
 
         <div class="header-list">
             <ul>
-                <li class="login" onclick="toLogin();" style="cursor: pointer;" onMouseOver="this.style.color='#C0C0C0'" onmouseout="this.style.color='#000000'"><?php
-                                                                                                                                                                    // ログイン中であれば「マイページ」を表示、それ以外の場合は「ログイン」を表示
-                                                                                                                                                                    if ($result) {
-                                                                                                                                                                        echo 'マイページ';
-                                                                                                                                                                    } else {
-                                                                                                                                                                        echo 'ログイン';
-                                                                                                                                                                    }
-                                                                                                                                                                    ?>
+                <li class="login" onclick="toLogin();" style="cursor: pointer;" onMouseOver="this.style.color='#C0C0C0'" onmouseout="this.style.color='#000000'">
+                    <?php
+                    if ($result) {
+                        echo 'マイページ';
+                    } else {
+                        echo 'ログイン';
+                    }
+                    ?>
                 <li class="search"><a href="choose.php">診断を選ぶ</a></li>
                 </li>
             </ul>

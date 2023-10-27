@@ -1,11 +1,7 @@
 <?php
 session_start();
-
 require_once 'UserLogic.php';
-
 $result = UserLogic::checkLogin();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +12,7 @@ $result = UserLogic::checkLogin();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ホームページ</title>
   <link rel="stylesheet" href="stylesheet.css">
-  <script type="text/javascript" src="english.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>

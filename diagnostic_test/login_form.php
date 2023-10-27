@@ -1,25 +1,16 @@
 <?php
 session_start();
-
 require_once 'UserLogic.php';
-
-// userlogicクラスのcheckLoginメソッド
 $result = UserLogic::checkLogin();
 if ($result) {
     header('Location: mypage.php');
     return;
 }
-
 $err = $_SESSION;
-
-// セッションファイルにarray()が入る
 $_SESSION = array();
-
-// セッションを消す
 session_destroy();
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +18,7 @@ session_destroy();
     <link rel="stylesheet" href="stylesheet.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="english.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <title>ログイン画面</title>
 </head>
 

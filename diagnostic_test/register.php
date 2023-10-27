@@ -4,15 +4,12 @@ require_once 'UserLogic.php';
 $result = UserLogic::checkLogin();
 // エラーメッセージ
 $err = [];
-
 $token = filter_input(INPUT_POST, 'csrf_token');
 //トークンがない、もしくは一致しない場合、処理を中止
 if (!isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']) {
   exit('不正なリクエスト');
 }
-
 unset($_SESSION['csrf_token']);
-
 if (!$username = filter_input(INPUT_POST, 'username')) {
   $err[] = 'ユーザ名を記入してください。';
 }
@@ -28,7 +25,6 @@ $password_conf = filter_input(INPUT_POST, 'password_conf');
 if ($password !== $password_conf) {
   $err[] = '確認用パスワードと異なっています。';
 }
-
 if (count($err) === 0) {
   // ユーザを登録する処理
   $hasCreated = UserLogic::createUser($_POST);
@@ -37,8 +33,8 @@ if (count($err) === 0) {
     $err[] = '登録に失敗しました';
   }
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +42,7 @@ if (count($err) === 0) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylesheet.css">
-  <script type="text/javascript" src="english.js"></script>
+  <script type="text/javascript" src="script.js"></script>
   <title>ユーザー登録完了画面</title>
 </head>
 
